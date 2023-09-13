@@ -107,6 +107,8 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                                     include "list-laphar.php";
                                   }else if($menu == "upload_laphar"){
                                     include "upload_laphar.php";
+                                  }else if($menu == "add_laphar"){
+                                    include "add_laphar.php";
                                   }else{
                                     include "data-laphar.php";
                                   }
