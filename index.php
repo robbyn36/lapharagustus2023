@@ -12,6 +12,9 @@
     <link href="assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+   <!-- DATATABLES STYLE AND SCRIPT -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
 </head>
 <body>
     <div id="wrapper">
@@ -102,6 +105,10 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                      <h2>Blank Page</h2>   
                         <h5>Welcome Jhon Deo , Love to see you back. </h5>
                                 <?php
+                                if (isset($_POST["name"])) {
+                                    echo htmlspecialchars($_POST["name"]);
+                                }
+                                
                                   $menu = $_GET['go'];
                                   if($menu == "laphar"){
                                     include "list-laphar.php";
@@ -126,14 +133,20 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
       <!-- BOOTSTRAP SCRIPTS -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- METISMENU SCRIPTS -->
     <script src="assets/js/jquery.metisMenu.js"></script>
       <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
-    
-   
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <!-- DATATABLES SCRIPT -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#table_laphar').DataTable();
+        });
+    </script>
 </body>
 </html>
