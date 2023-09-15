@@ -1,4 +1,5 @@
-<button type="button" class="btn btn-primary">Tambah Laporan</button>
+<a href="?go=add_laphar" class="btn btn-primary">Tambah Laporan</a>
+<hr>
 <table class="table" id="table_laphar" border='1'>
   <thead>
     <tr>
@@ -24,9 +25,15 @@
  ?>
     <tr>
       <td scope="row"><?php echo $no++; ?></td>
-      <td><?php echo $row["nomor"]; ?></td>
+      <td><?php echo "LAPHAR-".$row["nomor"]; ?></td>
       <td><?php echo $row["tanggal"]; ?></td>
-      <td>Susus/Edit/Delete</td>
+      <td>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <a href="?go=upload_laphar&no=<?php echo $row["nomor"]; ?>" class="btn btn-info">Susun</a>
+          <a href="" class="btn btn-warning">Edit</a>
+          <a href="" class="btn btn-danger">Delete</a>
+        </div>
+      </td>
     </tr>
 <?php }} ?>
   </tbody>

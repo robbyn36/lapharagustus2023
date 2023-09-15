@@ -14,7 +14,6 @@
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
    <!-- DATATABLES STYLE AND SCRIPT -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
-
 </head>
 <body>
     <div id="wrapper">
@@ -102,18 +101,17 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2>Blank Page</h2>   
-                        <h5>Welcome Jhon Deo , Love to see you back. </h5>
                                 <?php
                                 if (isset($_POST["name"])) {
                                     echo htmlspecialchars($_POST["name"]);
                                 }
-                                
                                   $menu = $_GET['go'];
                                   if($menu == "laphar"){
                                     include "list-laphar.php";
                                   }else if($menu == "upload_laphar"){
                                     include "upload_laphar.php";
+                                  }else if($menu == "susun_laphar"){
+                                    include 'susun_laphar.php';
                                   }else if($menu == "add_laphar"){
                                     include "add_laphar.php";
                                   }else{
