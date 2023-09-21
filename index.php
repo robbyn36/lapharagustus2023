@@ -145,6 +145,11 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
         $(document).ready(function () {
             $('#table_laphar').DataTable();
         });
+        $(document).ready(function () {
+            $('#table_susun_laphar').DataTable({
+                        "pageLength": 1
+            });
+        });
     </script>
 </body>
 </html>
